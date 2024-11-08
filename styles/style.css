@@ -46,6 +46,7 @@ ol {
   align-items: flex-end;
   gap: 30px;
   max-width: 1140px;
+  height: 535px;
 }
 
 .result {
@@ -57,10 +58,6 @@ ol {
 
 .result__video-container {
   position: relative;
-  /* min-width: 711px; */
-  /* max-width: 711px; */
-  /* max-height: 386px; */
-  /* min-height: 386px; */
   width: 711px;
   height: 386px;
 }
@@ -116,21 +113,25 @@ ol {
 }
 
 .search-form__label:has(.search-form__textfield):active {
-  outline: 1px solid white;
+  outline: 1px solid #fff;
   outline-offset: -1px;
 }
 
 .search-form__label:has(:focus-visible):not(:active) {
-  outline: 1px solid white;
+  outline: 1px solid #fff;
   outline-offset: 1px;
+}
+
+.search-form__fieldset-title:hover {
+  cursor: default;
 }
 
                         /* textfield  */
 .search-form__textfield {
   width: 225px;
   border: none;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   padding: 2px;
   color: inherit;
   font-family: inherit;
@@ -145,6 +146,10 @@ ol {
   outline-offset: -1px;
 }
 
+.search-form__textfield:hover {
+  cursor: text;
+}
+
 .search-form__textfield:focus {
   outline: none;
 }
@@ -153,7 +158,6 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-
   margin-top: 3px;
 }
 
@@ -170,7 +174,7 @@ ol {
   align-items: center;
   width: 19px;
   height: 19px;
-  border: 1px solid white;
+  border: 1px solid #fff;
 }
 
 /* input                       +  span */
@@ -178,13 +182,14 @@ ol {
   content: '';
   width: 15px;
   height: 15px;
-  background-color: white;
+  background-color: #fff;
 }
 
                         /* состояния */
 .search-form__checkbox-list > .search-form__label:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
+  cursor: pointer;
 }
 
                         /* CONTENT-DETAILS */
@@ -192,15 +197,15 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 26px;
+  gap: 20px;
   width: 100%;
   min-width: 400px;
   height: 100%;
-  min-height: 535px;
 }
 
 .title {
-  font-family: 'Oswald';
+  padding-top: 2px;
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
@@ -214,20 +219,18 @@ ol {
                         /* ul list */
 .content__list {
   position: relative;
-  min-width: 400px;
-  max-height: 300px;
+  max-width: 399px;
+  max-height: 298px;
+  padding-right: 4px;
   overflow: auto;
   overflow-x: hidden;
 }
-
-
 
                         /* template card-list */
 .content__list-item {
   display: flex;
   flex-direction: column;
 }
-
 
 .content__list-item:not(:last-child) {
   margin-bottom: 30px;
@@ -240,11 +243,12 @@ ol {
 
 .content__card-link {
   display: block;
+  margin: 2px;
   color: inherit;
   text-decoration: none;
-  margin: 2px;
 }
 
+                        /* card */
 .content__video-card {
   display: flex;
   justify-content: space-between;
@@ -253,7 +257,7 @@ ol {
 
 .content__video-card-description-container {
   width: 100%;
-  padding: 2px;
+  padding-left: 2px;
   color: #fff;
 }
 
@@ -277,7 +281,7 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  max-width: 194px;
+  min-width: 194px;
   max-height: 103px;
   object-fit: cover;
   object-position: center;
@@ -286,7 +290,7 @@ ol {
                         /* состояния */
 .content__card-link_current:focus-visible,
 .content__card-link:focus-visible {
-  outline: 1px solid white;
+  outline: 1px solid #fff;
 }
 
 .content__list-item:hover {
@@ -303,12 +307,12 @@ ol {
 }
 
 .content__list-item:focus-visible {
-  outline: 1px solid white;
+  outline: 1px solid #fff;
 }
 
                         /* BUTTONS */
 .button {
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding: 5px;
   color: inherit;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -325,9 +329,7 @@ ol {
 
 .more-button {
   width: 100%;
-  /* margin-left: 2px;
-  margin-bottom: 2px; */
-  margin: 2px;
+  margin: 0 2px 2px;
 }
 
                         /* состояния */
@@ -340,6 +342,6 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid white;
+  outline: 1px solid #fff;
   outline-offset: 1px;
 }
