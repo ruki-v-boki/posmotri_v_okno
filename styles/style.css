@@ -201,6 +201,7 @@ ol {
   width: 100%;
   min-width: 400px;
   height: 100%;
+  min-height: 535px;
 }
 
 .title {
@@ -302,7 +303,6 @@ ol {
 
 .content__list-item:hover {
   text-decoration: underline;
-  /* text-underline-offset: 3px; */
 }
 
 .content__list-item:active {
